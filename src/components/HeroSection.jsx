@@ -1,3 +1,5 @@
+import { FaCircleCheck } from 'react-icons/fa6'
+
 export default function HeroSection() {
   return (
     <section className="hero-wave relative overflow-hidden text-white">
@@ -14,7 +16,7 @@ export default function HeroSection() {
             L'excellence au service de l'humain
           </span>
           <h1 className="js-hero-title mt-4 max-w-xl font-heading text-[34px] font-black leading-tight sm:text-4xl md:mt-5 md:text-6xl">
-            Des agents fiables, formes et verifies
+            Des agents fiables, formés et vérifiés
           </h1>
           <p className="js-hero-sub mt-4 max-w-lg text-base text-indigo-100 md:mt-5 md:text-lg">
             Simplifiez votre quotidien avec des professionnels de confiance rigoureusement selectionnes pour votre confort.
@@ -26,9 +28,22 @@ export default function HeroSection() {
         </div>
 
         <div className="js-hero-img relative">
-          <img src="/images/hero-main.jpg" alt="Agent menage" className="h-[420px] w-full rounded-[1.6rem] object-cover shadow-2xl md:h-[520px] md:rounded-[2rem]" />
+          <div className="relative h-[420px] w-full md:h-[520px]">
+            <div className="hero-deck absolute inset-0">
+              <article className="hero-card hero-card-a">
+                <img src="/images/hero-main.jpg" alt="Agent menage" className="h-full w-full object-cover" />
+              </article>
+              <article className="hero-card hero-card-b">
+                <img src="/images/about-1.jpg" alt="Agent qualifie" className="h-full w-full object-cover" />
+              </article>
+            </div>
+          </div>
+
           <div className="absolute -bottom-5 left-3 rounded-2xl bg-white/95 p-3 text-slate-900 shadow-xl md:-bottom-6 md:-left-6 md:p-4">
-            <p className="text-xs font-bold text-[#0061a6]">100% VERIFIE</p>
+            <p className="inline-flex items-center gap-2 text-xs font-bold text-[#0061a6]">
+              <FaCircleCheck className="text-sm" aria-hidden="true" />
+              100% VÉRIFIÉ
+            </p>
             <p className="text-sm">Processus de certification strict</p>
           </div>
         </div>

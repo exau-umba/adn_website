@@ -42,6 +42,71 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 }
 
+.hero-deck {
+  perspective: 1200px;
+}
+
+.hero-card {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.hero-card-a {
+  z-index: 20;
+  animation: heroCardA 7s ease-in-out infinite;
+}
+
+.hero-card-b {
+  z-index: 10;
+  animation: heroCardB 7s ease-in-out infinite;
+}
+
+@keyframes heroCardA {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-1.4deg) scale(1);
+    z-index: 20;
+  }
+  40% {
+    transform: translateX(22px) translateY(-4px) rotate(2.4deg) scale(0.97);
+    z-index: 10;
+  }
+  50% {
+    z-index: 10;
+  }
+  55% {
+    z-index: 20;
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(-1.4deg) scale(1);
+    z-index: 20;
+  }
+}
+
+@keyframes heroCardB {
+  0% {
+    transform: translateX(26px) translateY(8px) rotate(2.8deg) scale(0.96);
+    z-index: 10;
+  }
+  40% {
+    transform: translateX(-8px) translateY(-2px) rotate(-1.2deg) scale(1);
+    z-index: 20;
+  }
+  50% {
+    z-index: 20;
+  }
+  55% {
+    z-index: 10;
+  }
+  100% {
+    transform: translateX(26px) translateY(8px) rotate(2.8deg) scale(0.96);
+    z-index: 10;
+  }
+}
+
 h1,
 h2,
 h3 {
@@ -51,5 +116,53 @@ h3 {
 @media (max-width: 768px) {
   .hero-wave {
     clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  }
+
+  .hero-card {
+    border-radius: 1.6rem;
+  }
+
+  .hero-card-a {
+    animation: heroCardAMobile 7s ease-in-out infinite;
+  }
+
+  .hero-card-b {
+    animation: heroCardBMobile 7s ease-in-out infinite;
+  }
+}
+
+@keyframes heroCardAMobile {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-1deg) scale(1);
+    z-index: 20;
+  }
+  45% {
+    transform: translateX(14px) translateY(-3px) rotate(2deg) scale(0.98);
+    z-index: 10;
+  }
+  55% {
+    z-index: 20;
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(-1deg) scale(1);
+    z-index: 20;
+  }
+}
+
+@keyframes heroCardBMobile {
+  0% {
+    transform: translateX(16px) translateY(6px) rotate(2.2deg) scale(0.97);
+    z-index: 10;
+  }
+  45% {
+    transform: translateX(-4px) translateY(-2px) rotate(-1deg) scale(1);
+    z-index: 20;
+  }
+  55% {
+    z-index: 10;
+  }
+  100% {
+    transform: translateX(16px) translateY(6px) rotate(2.2deg) scale(0.97);
+    z-index: 10;
   }
 }
