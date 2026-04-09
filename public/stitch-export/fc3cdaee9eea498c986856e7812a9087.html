@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ADN PRO SERVICE | Services à la Personne Premium</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#eceef3",
+                    "on-tertiary": "#ffffff",
+                    "outline": "#777684",
+                    "on-surface-variant": "#464652",
+                    "secondary-fixed": "#d2e4ff",
+                    "tertiary-fixed-dim": "#f5bf0c",
+                    "on-tertiary-container": "#aa8400",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#04006d",
+                    "secondary-container": "#41a2ff",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e1e2e8",
+                    "on-secondary-container": "#003761",
+                    "inverse-primary": "#c0c1ff",
+                    "on-primary-fixed-variant": "#363a9e",
+                    "outline-variant": "#c7c5d4",
+                    "surface-container-highest": "#e1e2e8",
+                    "on-background": "#191c20",
+                    "on-error": "#ffffff",
+                    "primary-container": "#08047a",
+                    "on-tertiary-fixed": "#251a00",
+                    "surface-tint": "#4f53b7",
+                    "surface-dim": "#d8dae0",
+                    "primary-fixed": "#e1e0ff",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed": "#ffdf95",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "tertiary-container": "#2c2000",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "primary": "#01003b",
+                    "on-secondary-fixed-variant": "#00497e",
+                    "surface": "#f8f9ff",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#7a7ee5",
+                    "inverse-surface": "#2e3135",
+                    "surface-bright": "#f8f9ff",
+                    "secondary-fixed-dim": "#a0caff",
+                    "inverse-on-surface": "#eff0f6",
+                    "secondary": "#0061a6",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "surface-container-high": "#e7e8ee",
+                    "surface-container-low": "#f2f3f9",
+                    "on-secondary-fixed": "#001c37",
+                    "on-surface": "#191c20",
+                    "tertiary": "#110a00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Wave for Hero */
+        .hero-wave {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+        /* Glassmorphism utility based on design system */
+        .glass-nav {
+            background: rgba(248, 249, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav shadow-xl shadow-slate-200/20 dark:shadow-none">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-black text-[#08047a] dark:text-white font-['Noto_Serif'] flex items-center gap-2">
+                ADN PRO SERVICE
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#08047a] transition-colors font-['Noto_Serif'] font-bold tracking-tight" href="#services">Services</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#08047a] transition-colors font-['Noto_Serif'] font-bold tracking-tight" href="#choisir">Pourquoi nous choisir</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#08047a] transition-colors font-['Noto_Serif'] font-bold tracking-tight" href="#processus">Processus</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-[#08047a] transition-colors font-['Noto_Serif'] font-bold tracking-tight" href="#temoignages">Témoignages</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-bold hover:opacity-80 transition-all duration-300 active:scale-95">
+                Demander un agent
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-primary-container text-white hero-wave">
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-tertiary-fixed-dim blur-[100px] rounded-full -translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<span class="inline-block px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs font-extrabold uppercase tracking-widest">L'excellence au service de l'humain</span>
+<h1 class="text-5xl md:text-7xl font-serif font-black leading-[1.1] tracking-tight">
+                        Des agents fiables, formés et vérifiés
+                    </h1>
+<p class="text-xl text-primary-fixed/80 max-w-lg leading-relaxed">
+                        Simplifiez votre quotidien avec des professionnels de confiance rigoureusement sélectionnés pour votre confort et votre sécurité.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-tertiary-fixed text-on-tertiary-fixed px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg hover:shadow-tertiary-fixed/20 transition-all">
+                            Demander un agent
+                        </button>
+<div class="flex items-center gap-4 px-6 border border-white/20 rounded-full bg-white/5 backdrop-blur-sm">
+<img alt="Logo" class="h-8" data-alt="clean professional minimalist corporate logo for ADN PRO SERVICE in navy blue and white colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5efLDb3rb3EecCUvOhxKPL_xji_ISltPEBb14V7DKGvUUJFYWVklNg7Mi_BSR1W4XLAtD42ovYPWednIOT__fX6PJ9d4YdkgxuYa0F-60LugI3cro5iZmPlFKrQRkzXvOSIZYuftb6b64WVdWYKEseoP3H8FyO2E7VwaaCUGTwcQT0ORExTksB5vmyTsB6LyMqsqr3cYfT14nwEruqVQo6g43sXlVb57gnIKwg0qk-Lcph09AAD59VIsq0A9xZNmyzB8gq5Gsjw"/>
+<span class="font-medium text-sm">Géré par ADN Group</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-[2.5rem] overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-[600px] object-cover" data-alt="professional domestic cleaner in white uniform working in a bright modern high-end minimalist apartment with soft sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC08UfuFCX68wCaxu4PVPE09ixXd0B1vJoIB5M0kboI0h9xbEH8AZCJ2rZ66Q1z69Am960VCUrgOxpfFsNP78mwr3dPJExyqLBqjh1kH-65DyTG_X6WlGDM-zoCIock6C_JBTM36v8hSOxDxvBg2_dx-sCuwQ7E_DCIEYTJPYnCns8CJXsdnkKUcV3ydp6mQtY5viQPW0BvA40eYCGapPkyPWaFmiR2-vZw1wMT3QDqD6SU-bXN30cW5oL_UxhD3_SKrdzbIsSc1tc"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-2xl shadow-xl flex items-center gap-4 max-w-xs transform -rotate-2">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<p class="text-on-surface font-bold">100% Vérifié</p>
+<p class="text-xs text-on-surface-variant">Processus de certification strict pour chaque agent.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Presentation Section -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<img class="w-full h-80 object-cover rounded-[2rem] mt-12 shadow-lg" data-alt="happy qualified professional nanny playing with a child in a sunlit playroom environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtbioqCZG44OoEdk35iWvdPHL--JK2lIM6YkfpB8I6J5EZzrQlxgyu4Hp0781XuVQPKzWXFmtG907QfGEyQejcU5ILj-CTkp30vGii_rbI51tdDvMN4CtX2kCprdufGHQMfjh12i23HTa4p12-kNY05uevu7bd2LFyYHjHUByVB-Cd2GbFeG9C4Okho5fD2l8x8Zx7vp5A59rcqtKERNKzJeAsE7KcWl1cZNdsvuv0-CQPGXrTKLFS4XMPqTmBm0dnLZrXPTCSwws"/>
+<img class="w-full h-80 object-cover rounded-[2rem] shadow-lg" data-alt="professional male chauffeur in black suit opening a luxury car door for a client" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCP6RW7qhbibUArAAAjWbU8NDKKVVNOwrsgCRhCqIDkNVNQapTnVcBO329Gw6ELADEmQE6ziSydIc2jh5Sqr1KFZLsG9qo9o0Ro5RkMRDZXtvOtSl_naQFWEg-HyMuR1JGMu60U7kAh5i5r0_0klSdzdLR8MSN95JFSblcul6WAkPRwkkDw7uLWhlmWNqGLxt-Zs-62I-DUPC8DYijlgNU1KLzKpAWzk_Ef0cy7FgTRIqPrFZCPDanrorbNzZhREnARYJ2VjRVnAU"/>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-tertiary-fixed rounded-full flex items-center justify-center shadow-2xl">
+<span class="text-[#08047a] font-black text-2xl">ADN</span>
+</div>
+</div>
+<div class="space-y-6">
+<span class="text-secondary font-extrabold tracking-widest uppercase text-sm">À propos de nous</span>
+<h2 class="text-4xl md:text-5xl font-serif font-bold text-primary">Nous connectons des clients avec des agents qualifiés</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                        ADN PRO SERVICE n'est pas seulement une plateforme de mise en relation. Nous sommes votre partenaire de confiance qui s'assure que chaque professionnel entrant dans votre foyer partage nos valeurs de rigueur, de respect et d'excellence.
+                    </p>
+<div class="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="task_alt">task_alt</span>
+<div>
+<h4 class="font-bold">Sélection d'Élite</h4>
+<p class="text-sm text-on-surface-variant">Seulement 5% des candidats sont retenus.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="groups">groups</span>
+<div>
+<h4 class="font-bold">Accompagnement</h4>
+<p class="text-sm text-on-surface-variant">Un conseiller dédié pour chaque client.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 bg-surface-container-low" id="services">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-4xl font-serif font-bold text-primary">Nos Services d'Excellence</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Une gamme complète de services à la personne pour répondre à tous vos besoins quotidiens avec professionnalisme.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Ménage -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all group border border-transparent hover:border-secondary-container/20">
+<div class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="cleaning_services">cleaning_services</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Ménage</h3>
+<p class="text-on-surface-variant text-sm mb-6">Entretien méticuleux de votre domicile par des mains expertes.</p>
+<a class="text-secondary font-bold inline-flex items-center gap-2 group-hover:translate-x-1 transition-transform" href="#">
+                            En savoir plus <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Garde d'enfants -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all group border border-transparent hover:border-secondary-container/20">
+<div class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="child_care">child_care</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Garde d’enfants</h3>
+<p class="text-on-surface-variant text-sm mb-6">Des nounous qualifiées pour l'éveil et la sécurité de vos enfants.</p>
+<a class="text-secondary font-bold inline-flex items-center gap-2 group-hover:translate-x-1 transition-transform" href="#">
+                            En savoir plus <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Chauffeur -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all group border border-transparent hover:border-secondary-container/20">
+<div class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="directions_car">directions_car</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Chauffeur</h3>
+<p class="text-on-surface-variant text-sm mb-6">Conduite sécurisée et ponctuelle pour tous vos déplacements privés.</p>
+<a class="text-secondary font-bold inline-flex items-center gap-2 group-hover:translate-x-1 transition-transform" href="#">
+                            En savoir plus <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+<!-- Repassage -->
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-xl transition-all group border border-transparent hover:border-secondary-container/20">
+<div class="w-16 h-16 bg-surface-container-high rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl" data-icon="iron">iron</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Repassage</h3>
+<p class="text-on-surface-variant text-sm mb-6">Un soin particulier pour votre linge, directement à votre domicile.</p>
+<a class="text-secondary font-bold inline-flex items-center gap-2 group-hover:translate-x-1 transition-transform" href="#">
+                            En savoir plus <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Reasons Section -->
+<section class="py-24 max-w-7xl mx-auto px-8" id="choisir">
+<div class="bg-primary-container rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+<div>
+<h2 class="text-4xl md:text-5xl font-serif font-bold mb-8">Pourquoi nous choisir ?</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="security_update_good">security_update_good</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Agents vérifiés</h4>
+<p class="text-primary-fixed/70">Antécédents judiciaires et références systématiquement contrôlés pour votre sérénité.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="visibility">visibility</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Suivi en temps réel</h4>
+<p class="text-primary-fixed/70">Suivez l'arrivée et le départ de votre agent via notre interface numérique dédiée.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="lock">lock</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Sécurité garantie</h4>
+<p class="text-primary-fixed/70">Une assurance responsabilité civile complète pour couvrir tout incident éventuel.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="shrink-0 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="model_training">model_training</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">Formation continue</h4>
+<p class="text-primary-fixed/70">Nos agents bénéficient de sessions régulières pour maintenir un niveau d'excellence.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative hidden lg:block">
+<img class="rounded-[2rem] w-full shadow-2xl" data-alt="happy corporate client showing success sign while receiving premium home assistance service" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Si37AAu5nVMNiwT7Lft6l9QRxN6HNG6SunYDgNKBMKwB-C-kZfKKNSqCymt6LYFW_3kO4MFDbHSY6UPuSJGwK5BCQyhxMWws3BtqUr8lPr_vaFnpl_-nvJltLoBPXCThn7vFfDZ8rA-Hq1Qzke2VHINFW2oqjm4sRs7MLypDT3CGSCSXKmRhz70eV19dAhX-ZXmn8QCSoA_yM8G3b43tErqGrCijDXE47sc-eNq3MW2Ar1UqRLTefL2vVsAXnuTZ_PN0NRnuOEY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="py-20 bg-surface">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="p-8 rounded-[2rem] bg-surface-container-low">
+<p class="text-5xl font-black text-secondary mb-2">500+</p>
+<p class="text-on-surface-variant font-bold">Nombre d’agents</p>
+</div>
+<div class="p-8 rounded-[2rem] bg-surface-container-low">
+<p class="text-5xl font-black text-secondary mb-2">2500+</p>
+<p class="text-on-surface-variant font-bold">Clients satisfaits</p>
+</div>
+<div class="p-8 rounded-[2rem] bg-surface-container-low">
+<p class="text-5xl font-black text-secondary mb-2">15k+</p>
+<p class="text-on-surface-variant font-bold">Missions réalisées</p>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-24 max-w-7xl mx-auto px-8" id="processus">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-serif font-bold text-primary">Comment ça marche ?</h2>
+<p class="text-on-surface-variant mt-4">Un processus simple et transparent en trois étapes.</p>
+</div>
+<div class="relative">
+<div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant/30 -z-10 translate-y-[-50%]"></div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="text-center space-y-6">
+<div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto border-8 border-surface shadow-lg">1</div>
+<h3 class="text-xl font-bold">Demande</h3>
+<p class="text-on-surface-variant">Décrivez vos besoins via notre formulaire en ligne ou par téléphone.</p>
+</div>
+<div class="text-center space-y-6">
+<div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto border-8 border-surface shadow-lg">2</div>
+<h3 class="text-xl font-bold">Sélection</h3>
+<p class="text-on-surface-variant">Nous sélectionnons l'agent le plus adapté à votre profil et vos exigences.</p>
+</div>
+<div class="text-center space-y-6">
+<div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto border-8 border-surface shadow-lg">3</div>
+<h3 class="text-xl font-bold">Intervention</h3>
+<p class="text-on-surface-variant">Votre agent intervient à la date convenue. Vous validez la mission.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Studies (Bento Grid) -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<h2 class="text-4xl font-serif font-bold text-primary text-center mb-16">Nos Réalisations</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<div class="md:col-span-2 relative rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="ultra-modern luxury kitchen interior perfectly cleaned and organized with soft glowing lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtA6Jej1o6ZR3L2uzpEd_Wave57FWNQBs9sDEY9dG6GCmMjS_by8dcgYtkrhfrbZMPPmgrktQZgQk5fMvvd6R82k_nnT_qPMGCkyiRik5MKzANQ-zMO_V8EW6B0foLd7hQRjtWOFJPU4qQYXpyG2fRnanIP8x1k1-ifTJIohNQWjAMQrgQbF781rmD8ts44kv06ywXyWRZFsHDiYBV6GPItEvdNjCekZYgNeDj80pfqxGiloEkK1XwL-up061cldi24vgQVLePvYY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-8 flex flex-col justify-end">
+<span class="text-tertiary-fixed font-bold mb-2">Entretien de Prestige</span>
+<h4 class="text-2xl font-bold text-white">Résidence secondaire à Paris 16e</h4>
+</div>
+</div>
+<div class="relative rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="dedicated personal assistant helping an elderly person in a garden setting with gentle care" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp0Vl74iIS-NOEgQ2u1JAKT5KCmfsz-ktWf2Tf5VhdUb87qOmGi38T_0XPI3vBDkG-J4VLrE-XYWLzhY3YmrWYsBtmKGI463lQMc1o21ZS7wVVI3AFScXDpGyEt8r2hz2qqIBCqkGJ7btVynCJAvUdFQWj4ULZ2q5cfiS8H2i0ZiP5lWyU18iiBxp088XEhA-tpuRTOoxBYB3m3Y2jhGRUWh2Ac7fyoyOd6wZPnGonKXkdCntsyeD5ezV1kXMK_2qiWaCmlrNYcAo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-8 flex flex-col justify-end">
+<span class="text-tertiary-fixed font-bold mb-2">Accompagnement</span>
+<h4 class="text-2xl font-bold text-white">Sénior &amp; Autonomie</h4>
+</div>
+</div>
+<div class="relative rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="perfectly folded white linens on a high-end bed showing professional laundry service results" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVtSKywfi0S_YpKkJveN-J72Kv69t0hz0Jm357c1Rr0Pz7z_kW6IyXEU2LBrXzlTrXxFdoERp5Q-nazQwePiAYYp_-RkDUdAxlFQdL5Hhvpb6F9pZToJicgx4s_U00SYgrlHwgutI9EYKVL4G_Abc_JJlQ_gEO82YO4zFSGwCirjR57KY-H-0ulQrUoGnnn1zWaviEkDaR4hld5-eRcd2cNGjtUmOiInAh0uNELIRkgSf9eBqjlI6Z6JHOoTL3Gqn0-pjWcIf4iZ4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-8 flex flex-col justify-end">
+<span class="text-tertiary-fixed font-bold mb-2">Lingerie</span>
+<h4 class="text-2xl font-bold text-white">Gestion hôtelière privée</h4>
+</div>
+</div>
+<div class="md:col-span-2 relative rounded-[2rem] overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="luxury professional chauffeured sedan driving through an elegant urban boulevard at evening" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWFXpf6TCuxz_2vX92wXEOZIhcj5GinK9t351waDubie24UaYOT8fbCnNcaWnv4z7SvQQpo_EYray6Ig3_sv3m5-JLlNGmtQoWMgp2AwDKcwbG5arRif3SlYUvvqxWU9LtbkyN0gAFjDCWJzOTwy_4-wCmmmUfTO348R12dQv8yT24iNOalqGOPaUbU77xsSIvbgAJzPMt55sMzPQqIL4twOLcwQ78v5FmJLKmFJX3ERdlnckBHGiUYzRyv-NTOvMJdep3-XMMXfU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent p-8 flex flex-col justify-end">
+<span class="text-tertiary-fixed font-bold mb-2">Logistique Mobilité</span>
+<h4 class="text-2xl font-bold text-white">Transfert Aéroport VIP</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-24 max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="text-4xl font-serif font-bold text-primary">Nos Agents Ambassadeurs</h2>
+<p class="text-on-surface-variant mt-4">Rencontrez les professionnels qui font l'excellence de notre service.</p>
+</div>
+<button class="text-secondary font-bold flex items-center gap-2 px-6 py-3 border border-secondary/20 rounded-full hover:bg-secondary/5 transition-colors">
+                    Rejoindre l'équipe <span class="material-symbols-outlined">work</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-4">
+<img class="w-full aspect-[3/4] object-cover rounded-[2rem]" data-alt="professional portrait of an elegant woman in a white polo shirt, smiling,ADN pro agent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiXg0TsoiNj7XCb0XvUczAKDP5TmgoyN9LCFpqrzjHEscKYZeBhxF_Yh3He5_thhi-2YJb42e8P0isIncHEEevy2fTb7yWcYvC8qQ8GCfuKDdoIoQJA1KldyCU3m5GoTfkr2ODwlWiiuW0glNHBOhozZ0IgVRtOtMkOaCiEjH0DzFJI6ANGjacWE3YaRDV7JzLIInTdQu3miOYA5YKSTm3CKr48FM4j_VZJBLG1KHWlfaqng8ZGtG4rtP7SohqaB5knrs19kPyydQ"/>
+<div>
+<p class="font-bold text-lg">Marie L.</p>
+<p class="text-secondary text-sm font-semibold">Gouvernante - 8 ans d'exp.</p>
+</div>
+</div>
+<div class="space-y-4">
+<img class="w-full aspect-[3/4] object-cover rounded-[2rem]" data-alt="professional portrait of a confident man in a formal uniform, chauffeur ADN pro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhFWcR8LD5KlIYa6rOzL69bXkUxvOzOxe3GRud8wIH78NsE93Ib_c0FgY_Y1cXvmr3B3MVo4mhXekE72qHjcTECeXkgDGu38j5MXhWqIUfjp3yRtVT7VsLGU7edFp-UFWz-XlBNahbjPNoINWsQNwHS8v-ucbdawx__q_b3ROENXgD0HhseUg1Vs7P7-Euw_RNFoK8AObMYYG5RANddiJIBCmQo0oqKw0TVuTHQGnJynTJE8IBK15Arte3pXtFHNRKH6xjKWZiaHc"/>
+<div>
+<p class="font-bold text-lg">Thomas D.</p>
+<p class="text-secondary text-sm font-semibold">Chauffeur Privé</p>
+</div>
+</div>
+<div class="space-y-4">
+<img class="w-full aspect-[3/4] object-cover rounded-[2rem]" data-alt="professional smiling african american woman agent ADN pro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPcBLdRecwowRtZGiDuIHqu3x7QTj-1BK4iFVRaoDqJViNzIF83-TUSTDXt7jaxjza2grxWYl_LsgD8u9unG5JEHhcbSI-pq9moCHfSSlwwGyX63FAD1M8hTSWpTrgrHtz1LZjFKcEfjWtkThCcVGn2Ist1iYkIw5mHgYxkHJNpNP5-OGpYLXMRu9iaO5Em-Rpm_wQS24yYa5OylbqPgBYtTfRsjnRmY_m9w2K6QOEtKKhWzPxxPYRlgmEehavy8cr_vrLjQCPDwg"/>
+<div>
+<p class="font-bold text-lg">Awa K.</p>
+<p class="text-secondary text-sm font-semibold">Garde d'enfants spécialisée</p>
+</div>
+</div>
+<div class="space-y-4">
+<img class="w-full aspect-[3/4] object-cover rounded-[2rem]" data-alt="modern professional man smiling, house management agent ADN pro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsFAN5YGvrhIyWXervAGJ29C-aXLQ7TKOYNnrzQzLsejAyNT3sVfKHBo7dbEL1GQxjxl1q_Q7SLsgFXvGHUpiSYVIHRWbywGhQBmpJYj2oQiEX9cq4MEKsn-icq6CqcneNFUlTMvdh9EHtlBEElY4ik1WGfs6vfYrIRVBlhHm9dZSpXPlOcfDKMsQ9iYB1geyVnbVqtKSaCiyPdTdEgj_dcgyJ4tPqUEQ-U4Y9YtKUNc0UlhoLU07uRVmee7roOI__KrduBdG4g00"/>
+<div>
+<p class="font-bold text-lg">Julien S.</p>
+<p class="text-secondary text-sm font-semibold">Home Manager</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 bg-primary text-white" id="temoignages">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<span class="text-tertiary-fixed font-bold tracking-widest uppercase text-sm">Avis Clients</span>
+<h2 class="text-4xl md:text-6xl font-serif font-bold mt-6 mb-8">Ils nous font confiance au quotidien</h2>
+<div class="flex gap-2 mb-12">
+<span class="material-symbols-outlined text-tertiary-fixed fill-current">star</span>
+<span class="material-symbols-outlined text-tertiary-fixed fill-current">star</span>
+<span class="material-symbols-outlined text-tertiary-fixed fill-current">star</span>
+<span class="material-symbols-outlined text-tertiary-fixed fill-current">star</span>
+<span class="material-symbols-outlined text-tertiary-fixed fill-current">star</span>
+<span class="ml-4 font-bold">4.9/5 sur Trustpilot</span>
+</div>
+</div>
+<div class="bg-white/5 backdrop-blur-xl p-12 rounded-[3rem] border border-white/10 relative">
+<span class="material-symbols-outlined text-6xl text-white/20 absolute top-8 left-8" data-icon="format_quote">format_quote</span>
+<div class="relative z-10">
+<p class="text-2xl font-medium leading-relaxed mb-8">
+                            "Trouver une personne de confiance pour s'occuper de mes enfants après l'école était un calvaire. Avec ADN PRO SERVICE, j'ai trouvé en 48h une perle rare qui est aujourd'hui indispensable à notre famille."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 bg-tertiary-fixed rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional executive woman client of ADN pro service" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqDuwEdnQauHuqpharzt3IXElk3Kt7LtsYNTwpl6nvvYpATGKGCaKPekBJbUZjvmhv9JqM2BLN4nGtEkubU2byDWRB-J8mx1moa3Y2ZYS5CIv09HGzcbVyi778i0LWZh2IKROJUwkQXO3Vukg9U0JyqU3xcDIZ7v1bdF1Kvos-ZEP-0y0vvwb2tjdtBG2zsVvwlqPerLdGiJYZ7_SGQdhFXgTajYsCTdl0Zm6jihUZP1PA-FILPxRa09v_PBtdGKYIr2PxoSm57I8"/>
+</div>
+<div>
+<p class="font-bold">Sophie Marchand</p>
+<p class="text-sm text-primary-fixed/60">Dirigeante Tech, Paris</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 max-w-7xl mx-auto px-8 text-center">
+<div class="bg-surface-container-highest rounded-[4rem] p-16 md:p-24 overflow-hidden relative group">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl group-hover:bg-secondary-container/40 transition-all duration-700"></div>
+<div class="relative z-10 max-w-2xl mx-auto space-y-8">
+<h2 class="text-4xl md:text-5xl font-serif font-bold text-primary">Prêt à simplifier votre vie ?</h2>
+<p class="text-xl text-on-surface-variant">Réservez votre premier agent en quelques clics et bénéficiez de 50% de crédit d'impôt.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl hover:shadow-primary/30 transition-all active:scale-95">
+                            Réservez votre agent dès aujourd’hui
+                        </button>
+<button class="bg-white text-primary border border-outline-variant/30 px-10 py-5 rounded-full font-bold text-lg hover:bg-surface-container-low transition-all">
+                            Voir les tarifs
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[2rem] mt-20 bg-[#f8f9ff] dark:bg-slate-900 tonal-layering bg-[#f2f3f9] dark:bg-slate-800/50">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 w-full px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-bold text-[#08047a] dark:text-white">ADN PRO SERVICE</div>
+<p class="text-slate-500 dark:text-slate-400 font-['Manrope'] text-sm leading-relaxed">
+                    L'excellence du service à la personne pour les particuliers et les entreprises exigeantes.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-[#08047a] hover:text-[#ffc81d] transition-colors focus-within:ring-2 ring-[#08047a]" href="#">
+<span class="material-symbols-outlined" data-icon="link">link</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center text-[#08047a] hover:text-[#ffc81d] transition-colors focus-within:ring-2 ring-[#08047a]" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-[#08047a] dark:text-white uppercase text-xs tracking-widest">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#ffc81d] transition-colors duration-200 font-['Manrope'] text-sm" href="#">Services</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#ffc81d] transition-colors duration-200 font-['Manrope'] text-sm" href="#">Pourquoi nous choisir</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#ffc81d] transition-colors duration-200 font-['Manrope'] text-sm" href="#">Devenir Agent</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#ffc81d] transition-colors duration-200 font-['Manrope'] text-sm" href="#">Tarifs</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-[#08047a] dark:text-white uppercase text-xs tracking-widest">Informations</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#ffc81d] transition-colors duration-200 font-['Manrope'] text-sm" href="#">Contact</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#ffc81d] transition-colors duration-200 font-['Manrope'] text-sm" href="#">Mentions Légales</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#ffc81d] transition-colors duration-200 font-['Manrope'] text-sm" href="#">Confidentialité</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-[#ffc81d] transition-colors duration-200 font-['Manrope'] text-sm" href="#">LinkedIn</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-bold text-[#08047a] dark:text-white uppercase text-xs tracking-widest">Contact</h4>
+<p class="text-slate-500 dark:text-slate-400 font-['Manrope'] text-sm">
+                    12 Rue de la Paix<br/>75002 Paris, France
+                </p>
+<p class="text-slate-500 dark:text-slate-400 font-['Manrope'] text-sm">
+                    +33 (0)1 23 45 67 89<br/>contact@adnproservice.fr
+                </p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 py-8 border-t border-slate-200 dark:border-slate-700/30 text-center text-slate-400 text-xs">
+            © 2024 ADN PRO SERVICE. Tous droits réservés.
+        </div>
+</footer>
+</body></html>

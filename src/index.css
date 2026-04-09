@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  background: #f8f9ff;
+}
+
+.font-serif {
+  font-family: "Noto Serif", serif;
+}
+
+.hero-wave {
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+}
