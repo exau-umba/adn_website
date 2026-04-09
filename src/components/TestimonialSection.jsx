@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+
 export default function TestimonialSection() {
   const testimonials = [
     {
@@ -22,6 +24,27 @@ export default function TestimonialSection() {
       avatar: '/images/team-3.jpg',
     },
   ]
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isVisible, setIsVisible] = useState(true)
+
+  useEffect(() => {
+    let timeoutId
+    const intervalId = window.setInterval(() => {
+      setIsVisible(false)
+
+      timeoutId = window.setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+        setIsVisible(true)
+      }, 340)
+    }, 5000)
+
+    return () => {
+      window.clearInterval(intervalId)
+      if (timeoutId) window.clearTimeout(timeoutId)
+    }
+  }, [testimonials.length])
+
+  const activeTestimonial = testimonials[currentIndex]
 
   return (
     <section id="temoignage" className="js-section relative overflow-hidden bg-[#01003b] py-20 text-white">
@@ -32,20 +55,20 @@ export default function TestimonialSection() {
           <h2 className="mt-4 font-heading text-4xl font-bold">Ils nous font confiance au quotidien</h2>
         </div>
         <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 p-3 md:p-4">
-          <div className="testimonial-track flex gap-4">
-            {[...testimonials, ...testimonials].map((item, index) => (
-              <article key={`${item.name}-${index}`} className="min-w-full rounded-[1.4rem] bg-white/8 p-6 md:p-8">
-                <p className="text-lg text-indigo-100">"{item.quote}"</p>
-                <div className="mt-6 flex items-center gap-4">
-                  <img src={item.avatar} alt={item.name} className="h-14 w-14 rounded-full object-cover" />
-                  <div>
-                    <p className="font-bold">{item.name}</p>
-                    <p className="text-sm text-indigo-200">{item.role}</p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+          <article
+            className={`rounded-[1.4rem] bg-white/8 p-6 transition-all duration-300 md:p-8 ${
+              isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+            }`}
+          >
+            <p className="text-lg text-indigo-100">"{activeTestimonial.quote}"</p>
+            <div className="mt-6 flex items-center gap-4">
+              <img src={activeTestimonial.avatar} alt={activeTestimonial.name} className="h-14 w-14 rounded-full object-cover" />
+              <div>
+                <p className="font-bold">{activeTestimonial.name}</p>
+                <p className="text-sm text-indigo-200">{activeTestimonial.role}</p>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
