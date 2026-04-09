@@ -33,6 +33,6 @@ jobs:
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key "$VPS_USER@$VPS_HOST" "mkdir -p /var/www/dismoipapa-app"
-          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key" build/ "$VPS_USER@$VPS_HOST:/var/www/dismoipapa-app/"
+          ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key "$VPS_USER@$VPS_HOST" "mkdir -p /var/www/adn_website"
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key" dist/ "$VPS_USER@$VPS_HOST:/var/www/adn_website/"
           rm -f ~/.ssh/deploy_key
