@@ -2,7 +2,9 @@ import { FaGooglePlay, FaAppStoreIos } from 'react-icons/fa6'
 
 export default function DownloadSection() {
   return (
-    <section className="js-section mx-auto max-w-7xl px-6 py-6 pb-20 md:py-10 md:pb-24">
+    <section className="js-section relative overflow-hidden py-6 pb-20 md:py-10 md:pb-24">
+      <div className="section-bg-glow section-bg-glow--right" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
       <div className="relative overflow-hidden rounded-[2rem] bg-[#08047a] p-8 text-white md:p-12">
         <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full bg-[#41a2ff]/35 blur-3xl" />
         <div className="absolute -bottom-16 -left-12 h-44 w-44 rounded-full bg-[#ffdf95]/30 blur-3xl" />
@@ -37,6 +39,7 @@ export default function DownloadSection() {
             </a>
           </div>
         </div>
+      </div>
       </div>
     </section>
   )

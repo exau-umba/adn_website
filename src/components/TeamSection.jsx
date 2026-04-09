@@ -7,7 +7,9 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="js-section mx-auto max-w-7xl px-6 py-20">
+    <section className="js-section relative overflow-hidden py-20">
+      <div className="section-bg-glow section-bg-glow--center" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
       <div className="flex items-end justify-between">
         <h2 className="font-heading text-3xl font-bold text-[#08047a] md:text-4xl">Nos Agents Ambassadeurs</h2>
         <button className="rounded-full border border-[#0061a6]/30 px-5 py-2 text-sm font-semibold text-[#0061a6]">Rejoindre l'equipe</button>
@@ -20,6 +22,7 @@ export default function TeamSection() {
             <p className="text-sm text-[#0061a6]">{member.role}</p>
           </article>
         ))}
+      </div>
       </div>
     </section>
   )

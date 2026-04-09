@@ -1,10 +1,16 @@
 import { FaCircleCheck } from 'react-icons/fa6'
 
 export default function HeroSection() {
+  const heroImages = {
+    bg: '/images/hero-bg.jpg',
+    main: '/images/hero-main.jpg',
+    second: '/images/about-1.jpg',
+  }
+
   return (
     <section className="hero-wave relative overflow-hidden text-white">
       <div className="absolute inset-0">
-        <img src="/images/hero-bg.jpg" alt="" className="h-full w-full object-cover object-center opacity-35" />
+        <img src={heroImages.bg} alt="" className="h-full w-full object-cover object-center opacity-35" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(65,162,255,0.45),transparent_35%),radial-gradient(circle_at_85%_80%,rgba(255,223,149,0.32),transparent_30%),linear-gradient(130deg,rgba(8,4,122,0.95),rgba(1,0,59,0.92))]" />
       </div>
       <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-[#41a2ff]/40 blur-3xl" />
@@ -31,10 +37,10 @@ export default function HeroSection() {
           <div className="relative h-[420px] w-full md:h-[520px]">
             <div className="hero-deck absolute inset-0">
               <article className="hero-card hero-card-a">
-                <img src="/images/hero-main.jpg" alt="Agent menage" className="h-full w-full object-cover" />
+                <img src={heroImages.main} alt="Agent menage professionnel" className="h-full w-full object-cover" />
               </article>
               <article className="hero-card hero-card-b">
-                <img src="/images/about-1.jpg" alt="Agent qualifie" className="h-full w-full object-cover" />
+                <img src={heroImages.second} alt="Service de garde d'enfants" className="h-full w-full object-cover" />
               </article>
             </div>
           </div>

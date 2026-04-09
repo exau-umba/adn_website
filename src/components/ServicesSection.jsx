@@ -7,8 +7,9 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="js-section bg-[#f2f3f9] py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section id="services" className="js-section relative overflow-hidden bg-[#f2f3f9] py-20">
+      <div className="section-bg-glow section-bg-glow--right" />
+      <div className="mx-auto max-w-7xl px-6 relative z-10">
         <h2 className="text-center font-heading text-3xl font-bold text-[#08047a] md:text-4xl">Nos Services d'Excellence</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (

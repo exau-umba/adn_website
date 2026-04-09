@@ -7,8 +7,9 @@ const realisations = [
 
 export default function RealisationsSection() {
   return (
-    <section className="js-section bg-[#f2f3f9] py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="js-section relative overflow-hidden bg-[#f2f3f9] py-20">
+      <div className="section-bg-glow section-bg-glow--right" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
         <h2 className="text-center font-heading text-3xl font-bold text-[#08047a] md:text-4xl">Nos Realisations</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {realisations.map((item) => (

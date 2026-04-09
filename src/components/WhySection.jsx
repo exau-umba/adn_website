@@ -9,8 +9,10 @@ export default function WhySection() {
   ]
 
   return (
-    <section id="pourquoi" className="js-section mx-auto max-w-7xl px-6 py-20">
-      <div className="grid gap-10 rounded-[2rem] bg-[#08047a] p-8 text-white md:p-12 lg:grid-cols-2">
+    <section id="pourquoi" className="js-section relative overflow-hidden py-20">
+      <div className="section-bg-noise" />
+      <div className="relative z-10 mx-auto max-w-7xl px-6">
+        <div className="grid gap-10 rounded-[2rem] bg-[#08047a] p-8 text-white md:p-12 lg:grid-cols-2">
         <div>
           <h2 className="font-heading text-3xl font-bold md:text-4xl">Pourquoi nous choisir ?</h2>
           <ul className="mt-6 space-y-4 text-indigo-100">
@@ -23,6 +25,7 @@ export default function WhySection() {
           </ul>
         </div>
         <img src="/images/why.jpg" alt="Client satisfait" className="h-80 w-full rounded-3xl object-cover" />
+        </div>
       </div>
     </section>
   )
