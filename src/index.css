@@ -1,15 +1,55 @@
 @import "tailwindcss";
 
-body {
-  margin: 0;
-  font-family: "Manrope", sans-serif;
-  background: #f8f9ff;
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("/fonts/MyriadPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-.font-serif {
-  font-family: "Noto Serif", serif;
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("/fonts/MyriadPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Orenza Bold Demo";
+  src: url("/fonts/Orenza-Bold-Demo.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: "Myriad Pro", "Manrope", sans-serif;
+  background: #f8f9ff;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.font-heading {
+  font-family: "Orenza Bold Demo", "Noto Serif", serif;
+  letter-spacing: 0.01em;
 }
 
 .hero-wave {
   clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Orenza Bold Demo", "Noto Serif", serif;
+}
+
+@media (max-width: 768px) {
+  .hero-wave {
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+  }
 }
