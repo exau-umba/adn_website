@@ -7,7 +7,7 @@ export default function ContactSection() {
           <p className="text-xs font-bold uppercase tracking-widest text-[#08047a]">Contact</p>
           <h2 className="mt-4 font-heading text-3xl font-bold text-[#08047a] md:text-4xl">Parlons de votre besoin</h2>
           <p className="mt-4 max-w-xl text-slate-600">
-            Une equipe vous repond rapidement pour vous proposer un service adapte a votre domicile ou votre entreprise.
+            Une équipe vous répond rapidement pour vous proposer un service adapté à votre domicile ou votre entreprise.
           </p>
           <div className="mt-6 space-y-2 text-sm text-slate-700">
             <p>Kinshasa, RD Congo</p>

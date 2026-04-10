@@ -13,10 +13,10 @@ export default function DownloadSection() {
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-[#ffdf95]">Application mobile</p>
             <h2 className="mt-3 font-heading text-3xl font-bold leading-tight md:text-4xl">
-              Telechargez notre app client
+              Téléchargez notre app client
             </h2>
             <p className="mt-4 max-w-xl text-indigo-100">
-              Faites votre demande d'agent en quelques clics, suivez vos reservations et echangez facilement avec notre equipe depuis votre mobile.
+              Faites votre demande d'agent en quelques clics, suivez vos réservations et échangez facilement avec notre équipe depuis votre mobile.
             </p>
           </div>
 
@@ -24,7 +24,7 @@ export default function DownloadSection() {
             <a
               href="#"
               className="js-card inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white px-6 py-4 text-center font-bold text-[#08047a] shadow-lg transition hover:-translate-y-0.5"
-              aria-label="Telecharger sur Android"
+              aria-label="Télécharger sur Android"
             >
               <FaGooglePlay className="text-lg" />
               Google Play
@@ -32,7 +32,7 @@ export default function DownloadSection() {
             <a
               href="#"
               className="js-card inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-black px-6 py-4 text-center font-bold text-white shadow-lg transition hover:-translate-y-0.5"
-              aria-label="Telecharger sur iOS"
+              aria-label="Télécharger sur iOS"
             >
               <FaAppStoreIos className="text-lg" />
               App Store

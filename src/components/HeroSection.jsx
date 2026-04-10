@@ -25,11 +25,11 @@ export default function HeroSection() {
             Des agents fiables, formés et vérifiés
           </h1>
           <p className="js-hero-sub mt-4 max-w-lg text-base text-indigo-100 md:mt-5 md:text-lg">
-            Simplifiez votre quotidien avec des professionnels de confiance rigoureusement selectionnes pour votre confort.
+            Simplifiez votre quotidien avec des professionnels de confiance rigoureusement sélectionnés pour votre confort.
           </p>
           <div className="js-hero-cta mt-7 flex flex-wrap gap-3 md:mt-8">
-            <button className="rounded-full bg-[#ffdf95] px-5 py-2.5 text-sm font-bold text-[#251a00] md:px-7 md:py-3 md:text-base">Demander un agent</button>
-            <button className="rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-bold text-white md:px-7 md:py-3 md:text-base">Voir les tarifs</button>
+            <button className="rounded-full bg-[#ffdf95] px-5 py-2.5 text-sm font-bold text-[#251a00] hover:bg-white hover:text-[#251a00] transition-all duration-300 active:scale-95 md:px-7 md:py-3 md:text-base"><a href="#contact">Demander un agent</a></button>
+            <button className="rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-bold text-white md:px-7 md:py-3 md:text-base"><a href="#tarifs">Voir les tarifs</a></button>
           </div>
         </div>
 
