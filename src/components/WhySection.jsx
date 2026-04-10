@@ -2,9 +2,9 @@ import { FaCircleCheck } from 'react-icons/fa6'
 
 export default function WhySection() {
   const points = [
-    'Agents verifies (references et antecedents controles)',
-    'Suivi en temps reel et service client dedie',
-    'Securite et assurance responsabilite civile',
+    'Agents vérifiés (références etAntecedents contrôlés)',
+    'Suivi en temps réel et service client dédié',
+    'Sécurité et assurance responsabilité civile',
     'Formation continue des agents',
   ]
 

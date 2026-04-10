@@ -5,15 +5,15 @@ export default function StatsSection() {
       <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 text-center md:grid-cols-3">
         <div className="js-card rounded-3xl bg-[#f2f3f9] p-7">
           <p className="text-4xl font-black text-[#0061a6]">500+</p>
-          <p className="mt-2 font-semibold text-slate-600">Nombre d'agents</p>
+          <p className="mt-2 font-semibold text-slate-600">Nombre d'Agents</p>
         </div>
         <div className="js-card rounded-3xl bg-[#f2f3f9] p-7">
           <p className="text-4xl font-black text-[#0061a6]">2500+</p>
-          <p className="mt-2 font-semibold text-slate-600">Clients satisfaits</p>
+          <p className="mt-2 font-semibold text-slate-600">Clients Satisfaits</p>
         </div>
         <div className="js-card rounded-3xl bg-[#f2f3f9] p-7">
           <p className="text-4xl font-black text-[#0061a6]">15k+</p>
-          <p className="mt-2 font-semibold text-slate-600">Missions realisees</p>
+          <p className="mt-2 font-semibold text-slate-600">Missions réalisées</p>
         </div>
       </div>
     </section>

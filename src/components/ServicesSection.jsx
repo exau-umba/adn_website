@@ -1,8 +1,8 @@
 const services = [
-  { title: 'Menage', desc: 'Entretien meticuleux de votre domicile par des mains expertes.' },
-  { title: "Garde d'enfants", desc: "Des nounous qualifiees pour l'eveil et la securite de vos enfants." },
-  { title: 'Chauffeur', desc: 'Conduite securisee et ponctuelle pour vos deplacements prives.' },
-  { title: 'Repassage', desc: 'Un soin particulier pour votre linge, directement a domicile.' },
+  { title: 'Ménage', desc: 'Entretien méticuleux de votre domicile par des mains expertes.' },
+  { title: "Garde d'enfants", desc: "Des nounous qualifiées pour l'éveil et la sécurité de vos enfants." },
+  { title: 'Chauffeur', desc: 'Conduite sécurisée et ponctuelle pour vos déplacements privés.' },
+  { title: 'Repassage', desc: 'Un soin particulier pour votre linge, directement à domicile.' },
 ]
 
 export default function ServicesSection() {

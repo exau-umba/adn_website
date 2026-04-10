@@ -9,9 +9,9 @@ export default function AboutSection() {
       </div>
       <div className="relative z-10">
         <p className="text-xs font-extrabold uppercase tracking-widest text-[#0061a6]">A propos de nous</p>
-        <h2 className="mt-3 font-heading text-3xl font-bold text-[#08047a] md:text-5xl">Nous connectons des clients avec des agents qualifies</h2>
+        <h2 className="mt-3 font-heading text-3xl font-bold text-[#08047a] md:text-5xl">Nous connectons des clients avec des agents qualifiés</h2>
         <p className="mt-5 text-slate-600">
-          ADN PRO SERVICE est votre partenaire de confiance pour les services a la personne premium, avec un accompagnement humain et un suivi qualite.
+          ADN PRO SERVICE est votre partenaire de confiance pour les services à la personne premium, avec un accompagnement humain et un suivi qualité.
         </p>
       </div>
       </div>
