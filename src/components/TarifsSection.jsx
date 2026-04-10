@@ -31,9 +31,9 @@ export default function TarifsSection() {
       <div className="section-bg-glow section-bg-glow--right" />
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <p className="text-center text-xs font-bold uppercase tracking-widest text-[#08047a]">Tarifs</p>
-        <h2 className="mt-3 text-center font-heading text-3xl font-bold text-[#08047a] md:text-4xl">Classement des agents par categorie client</h2>
+        <h2 className="mt-3 text-center font-heading text-3xl font-bold text-[#08047a] md:text-4xl">Classement des agents par catégorie client</h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-slate-600">
-          Nos agents sont classes par niveau d&apos;experience, de fiabilite et d&apos;exigence client pour garantir le bon profil au bon foyer.
+          Nos agents sont classés par niveau d&apos;expérience, de fiabilité et d&apos;exigence client pour garantir le bon profil au bon foyer.
         </p>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -59,7 +59,7 @@ export default function TarifsSection() {
                   plan.highlighted ? 'bg-white text-[#08047a]' : 'bg-[#08047a] text-white'
                 }`}
               >
-                Demander cet agent
+                Demander cet Agent
               </button>
             </article>
           ))}

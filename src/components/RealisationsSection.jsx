@@ -1,8 +1,8 @@
 const realisations = [
-  { title: 'Residence secondaire a Paris', img: '/images/real-1.jpg' },
-  { title: 'Accompagnement senior', img: '/images/real-2.jpg' },
-  { title: 'Gestion hoteliere privee', img: '/images/real-3.jpg' },
-  { title: 'Transfert aeroport VIP', img: '/images/real-4.jpg' },
+  { title: 'Résidence secondaire à Paris', img: '/images/real-1.jpg' },
+  { title: 'Accompagnement Senior', img: '/images/real-2.jpg' },
+  { title: 'Gestion hôtelière privée', img: '/images/real-3.jpg' },
+  { title: 'Transfert aéroport VIP', img: '/images/real-4.jpg' },
 ]
 
 export default function RealisationsSection() {
@@ -10,7 +10,7 @@ export default function RealisationsSection() {
     <section className="js-section relative overflow-hidden bg-[#f2f3f9] py-20">
       <div className="section-bg-glow section-bg-glow--right" />
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <h2 className="text-center font-heading text-3xl font-bold text-[#08047a] md:text-4xl">Nos Realisations</h2>
+        <h2 className="text-center font-heading text-3xl font-bold text-[#08047a] md:text-4xl">Nos Réalisations</h2>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
           {realisations.map((item) => (
             <article key={item.title} className="js-card group relative overflow-hidden rounded-3xl">

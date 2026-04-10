@@ -1,6 +1,6 @@
 const team = [
   { name: 'Marie L.', role: 'Gouvernante', img: '/images/team-1.jpg' },
-  { name: 'Thomas D.', role: 'Chauffeur prive', img: '/images/team-2.jpg' },
+  { name: 'Thomas D.', role: 'Chauffeur privé', img: '/images/team-2.jpg' },
   { name: 'Awa K.', role: "Garde d'enfants", img: '/images/team-3.jpg' },
   { name: 'Julien S.', role: 'Home manager', img: '/images/team-4.jpg' },
 ]
@@ -12,7 +12,7 @@ export default function TeamSection() {
       <div className="relative z-10 mx-auto max-w-7xl px-6">
       <div className="flex items-end justify-between">
         <h2 className="font-heading text-3xl font-bold text-[#08047a] md:text-4xl">Nos Agents Ambassadeurs</h2>
-        <button className="rounded-full border border-[#0061a6]/30 px-5 py-2 text-sm font-semibold text-[#0061a6]">Rejoindre l'equipe</button>
+        <button className="rounded-full border border-[#0061a6]/30 px-5 py-2 text-sm font-semibold text-[#0061a6]">Rejoindre l'Équipe</button>
       </div>
       <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
         {team.map((member) => (
