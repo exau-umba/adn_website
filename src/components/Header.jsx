@@ -11,8 +11,12 @@ export default function Header() {
           <a href="#pourquoi">Pourquoi nous choisir</a>
           <a href="#processus">Processus</a>
           <a href="#temoignage">Temoignages</a>
+          <a href="#tarifs">Tarifs</a>
+          <a href="#contact">Contact</a>
         </div>
-        <button className="rounded-full bg-[#08047a] px-4 py-2 text-[11px] font-bold text-white md:px-5 md:text-sm">Demander un agent</button>
+        <a href="#contact" className="rounded-full bg-[#08047a] px-4 py-2 text-[11px] font-bold text-white md:px-5 md:text-sm">
+          Demander un agent
+        </a>
       </nav>
     </header>
   )

@@ -13,6 +13,8 @@ import TeamSection from './components/TeamSection'
 import TestimonialSection from './components/TestimonialSection'
 import CtaSection from './components/CtaSection'
 import DownloadSection from './components/DownloadSection'
+import TarifsSection from './components/TarifsSection'
+import ContactSection from './components/ContactSection'
 import BackToTopButton from './components/BackToTopButton'
 import Footer from './components/Footer'
 
@@ -64,8 +66,10 @@ export default function App() {
         <RealisationsSection />
         <TeamSection />
         <TestimonialSection />
+        <TarifsSection />
         <CtaSection />
         <DownloadSection />
+        <ContactSection />
       </main>
       <Footer />
       <BackToTopButton />
