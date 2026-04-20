@@ -19,7 +19,7 @@ export default function HeroSection() {
       <div className="relative mx-auto grid min-h-[680px] max-w-7xl items-center gap-8 px-4 py-12 md:px-6 md:py-14 lg:grid-cols-2 lg:gap-10">
         <div>
           <span className="inline-block rounded-full bg-amber-300 px-3.5 py-1 text-[10px] font-extrabold uppercase tracking-widest text-[#251a00] md:px-4 md:text-xs">
-            L'excellence au service de l'humain
+            L'Excellence au coeur du service
           </span>
           <h1 className="js-hero-title mt-4 max-w-xl font-heading text-[34px] font-black leading-tight sm:text-4xl md:mt-5 md:text-6xl">
             Des agents fiables, formés et vérifiés

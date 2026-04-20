@@ -7,7 +7,7 @@ export default function Footer() {
             <img src="/logos/and_pro_service_multiservice_cercle.png" alt="logo ADN" className="h-9 w-9 rounded-full object-cover" />
             <p className="font-heading text-lg font-black text-[#08047a]">ADN PRO SERVICE</p>
           </div>
-          <p className="mt-4 text-sm text-slate-600">L'excellence du service à la personne pour particuliers et entreprises.</p>
+          <p className="mt-4 text-sm text-slate-600">L'Excellence au coeur du service</p>
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-widest text-slate-500">Navigation</p>
