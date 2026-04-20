@@ -10,8 +10,8 @@ export default function ContactSection() {
             Une équipe vous répond rapidement pour vous proposer un service adapté à votre domicile ou votre entreprise.
           </p>
           <div className="mt-6 space-y-2 text-sm text-slate-700">
-            <p>Kinshasa, RD Congo</p>
-            <p>+243 82 90 84 314</p>
+            <p>Avenue Tombalbaye, dans l'enceinte de la paroisse de Notre Dame de Fatima <br /> Kinshasa-Gombe</p>
+            <p>+243 892 579 709</p>
             <p>contact@adnproservice.com</p>
           </div>
         </div>

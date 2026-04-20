@@ -27,8 +27,8 @@ export default function Footer() {
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-widest text-slate-500">Contact</p>
-          <p className="mt-4 text-sm text-slate-600">Kinshasa, RD Congo</p>
-          <p className="text-sm text-slate-600">+243 82 90 84 314</p>
+          <p className="mt-4 text-sm text-slate-600">Avenue Tombalbaye, dans l'enceinte de la paroisse de Notre Dame de Fatima <br /> Kinshasa-Gombe</p>
+          <p className="text-sm text-slate-600">+243 892 579 709</p>
           <p className="text-sm text-slate-600">contact@adnproservice.com</p>
         </div>
       </div>

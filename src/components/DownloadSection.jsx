@@ -13,7 +13,7 @@ export default function DownloadSection() {
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-[#ffdf95]">Application mobile</p>
             <h2 className="mt-3 font-heading text-3xl font-bold leading-tight md:text-4xl">
-              Téléchargez notre app client
+              Téléchargez notre app Adn client
             </h2>
             <p className="mt-4 max-w-xl text-indigo-100">
               Faites votre demande d'agent en quelques clics, suivez vos réservations et échangez facilement avec notre équipe depuis votre mobile.
