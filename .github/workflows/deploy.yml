@@ -1,38 +1,80 @@
-name: Build et déploiement
+name: Déploiement Automatique LWS
 
 on:
   push:
     branches:
-      - main
+      - main # Déclenche le build à chaque push sur la branche principale
 
 jobs:
-  build-and-deploy:
+  web-deploy:
+    name: 🎉 Compilation et Transfert
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      # 1. Récupère le code du dépôt
+      - name: Récupération du code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      # 2. Installe Node.js
+      - name: 🟢 Configuration de Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: '20' # Ajustez selon la version de votre projet
 
-      - name: Install dependencies
-        run: npm ci --legacy-peer-deps
-
-      - name: Build app
-        run: npm run build:ignore-ts
-
-      - name: Déployer vers le serveur (rsync)
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          VPS_HOST: ${{ secrets.VPS_HOST }}
-          VPS_USER: ${{ secrets.VPS_USER }}
+      # 3. Installe les dépendances et build le projet React
+      - name: 🛠️ Build de l'application React
         run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key "$VPS_USER@$VPS_HOST" "mkdir -p /var/www/adn_website"
-          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key" dist/ "$VPS_USER@$VPS_HOST:/var/www/adn_website/"
-          rm -f ~/.ssh/deploy_key
+          npm ci
+          npm run build
+
+      # 4. Synchronise le dossier de build avec l'hébergement LWS via FTP
+      - name: 📂 Transfert des fichiers vers LWS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # IMPORTANT : 'dist' si vous utilisez Vite, ou 'build' si vous utilisez Create React App
+          local-dir: ./dist/ 
+          # Optionnel : Ajoutez le dossier cible sur LWS si nécessaire (ex: ./htdocs/ ou ./)
+          server-dir: ./
+
+
+# name: Build et déploiement
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: "20"
+#           cache: "npm"
+
+#       - name: Install dependencies
+#         run: npm ci --legacy-peer-deps
+
+#       - name: Build app
+#         run: npm run build:ignore-ts
+
+#       - name: Déployer vers le serveur (rsync)
+#         env:
+#           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+#           VPS_HOST: ${{ secrets.VPS_HOST }}
+#           VPS_USER: ${{ secrets.VPS_USER }}
+#         run: |
+#           mkdir -p ~/.ssh
+#           echo "$SSH_PRIVATE_KEY" > ~/.ssh/deploy_key
+#           chmod 600 ~/.ssh/deploy_key
+#           ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key "$VPS_USER@$VPS_HOST" "mkdir -p /var/www/adn_website"
+#           rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no -i ~/.ssh/deploy_key" dist/ "$VPS_USER@$VPS_HOST:/var/www/adn_website/"
+#           rm -f ~/.ssh/deploy_key
