@@ -13,6 +13,20 @@ export default function OffresSection() {
           </p>
         </div>
 
+        {offres.length === 0 ? (
+          <div className="mt-10 rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-10 text-center">
+            <h3 className="text-lg font-bold text-slate-900">Aucune offre disponible pour le moment</h3>
+            <p className="mx-auto mt-2 max-w-xl text-sm text-slate-600">
+              Revenez bientot : nos prochaines offres de recrutement seront publiees ici.
+            </p>
+            <a
+              href="/#contact"
+              className="mt-5 inline-flex rounded-full bg-[#08047a] px-4 py-2 text-xs font-bold text-white hover:bg-[#0b06a6]"
+            >
+              Nous contacter
+            </a>
+          </div>
+        ) : (
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {offres.map((offre) => {
             const expiree = estOffreExpiree(offre.dateFin)
@@ -52,6 +66,7 @@ export default function OffresSection() {
             )
           })}
         </div>
+        )}
       </div>
     </section>
   )

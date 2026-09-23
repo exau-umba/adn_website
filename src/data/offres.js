@@ -1,4 +1,8 @@
-export const offres = [
+// Aucune offre publiee pour l'instant : ajouter les offres dans ce tableau.
+export const offres = []
+
+// Exemples de format d'offre (non publies)
+export const exemplesOffres = [
   {
     id: 'agent-polyvalent',
     titre: 'Agent polyvalent',
