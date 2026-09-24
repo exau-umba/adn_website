@@ -26,12 +26,8 @@ jobs:
         run: |
           npm ci
           npm run build
-          # Génère un fichier .htaccess pour gérer le routage de l'application React
-          echo "Options -MultiViews" > ./dist/.htaccess
-          echo "RewriteEngine On" >> ./dist/.htaccess
-          echo "RewriteCond %{REQUEST_FILENAME} !-f" >> ./dist/.htaccess
-          echo "RewriteCond %{REQUEST_FILENAME} !-d" >> ./dist/.htaccess
-          echo "RewriteRule ^ index.html [L]" >> ./dist/.htaccess
+          # Le .htaccess (routage React) vient de public/ : on verifie qu'il est bien dans le build
+          test -f ./dist/.htaccess
 
       # 4. Synchronise le dossier de build avec l'hébergement LWS via FTP
       - name: 📂 Transfert des fichiers vers LWS
